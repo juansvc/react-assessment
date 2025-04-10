@@ -33,6 +33,54 @@ This project is a single-page application built with React that demonstrates pro
 ### Installation
 
 1. Clone the repository
-   ```bash
-   git clone https://github.com/your-username/react-assessment.git
-   cd react-assessment
+git clone https://github.com/juansvc/react-assessment.git
+cd react-assessment
+
+2. Install dependencies
+npm install
+# or
+yarn
+
+3. Start the development server
+npm run dev
+# or
+yarn dev
+
+4. Open your browser and navigate to http://localhost:5173
+
+### Project Structure
+src/
+├── assets/         # Static assets like images
+├── components/     # Reusable UI components
+├── contexts/       # React contexts
+├── features/       # Feature-based modules
+├── hooks/          # Custom React hooks
+├── layouts/        # Layout components
+├── lib/            # Utility libraries
+├── services/       # API services
+├── styles/         # Global styles and theme
+├── types/          # TypeScript type definitions
+├── utils/          # Utility functions
+├── App.tsx         # Main App component
+└── main.tsx        # Entry point
+
+### Authentication
+For the purpose of this assessment, the application uses a simulated authentication flow. Any email and password combination will work.
+API Integration
+The application integrates with a mock API (JSONPlaceholder) to simulate real-world data fetching scenarios.
+Development Practices
+
+Clean Code: Following best practices for maintainable code
+Type Safety: TypeScript used throughout the application
+Component Design: Modular, reusable components
+Responsive Design: Mobile-first approach with fluid layouts
+State Management: Efficient state management with context API
+Error Handling: Comprehensive error handling and user feedback
+
+### Future Improvements
+Add unit and integration tests
+Implement more advanced authentication features
+Add offline mode support
+Enhance accessibility features
+Add data visualization components
+Improve performance optimizations

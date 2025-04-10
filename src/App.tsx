@@ -12,6 +12,8 @@ import { MainLayout } from '@/layouts/MainLayout';
 // Pages
 import { HomePage } from '@/features/home/HomePage';
 import { LoginPage } from '@/features/auth/LoginPage';
+import { DashboardPage } from '@/features/dashboard/DashboardPage';
+import { NotFoundPage } from '@/features/errors/NotFoundPage';
 
 // Create a React Query client
 const queryClient = new QueryClient({
@@ -34,7 +36,7 @@ const App: React.FC = () => {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<LoginPage />} />
-      <h1>Vite + React</h1>
+                <Route path="/dashboard" element={<DashboardPage />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </MainLayout>
