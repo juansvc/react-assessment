@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 
 interface CardProps {
   padding?: 'none' | 'small' | 'medium' | 'large';
@@ -10,12 +10,12 @@ const getPadding = (padding: CardProps['padding']) => {
     case 'none':
       return '0';
     case 'small':
-      return ({ theme }) => theme.space.sm;
+      return ({ theme }: { theme: DefaultTheme }) => theme.space.sm;
     case 'large':
-      return ({ theme }) => theme.space.xl;
+      return ({ theme }: { theme: DefaultTheme }) => theme.space.xl;
     case 'medium':
     default:
-      return ({ theme }) => theme.space.lg;
+      return ({ theme }: { theme: DefaultTheme }) => theme.space.lg;
   }
 };
 
@@ -24,12 +24,12 @@ const getShadow = (elevation: CardProps['elevation']) => {
     case 'none':
       return 'none';
     case 'small':
-      return ({ theme }) => theme.shadows.sm;
+      return ({ theme }: { theme: DefaultTheme }) => theme.shadows.sm;
     case 'large':
-      return ({ theme }) => theme.shadows.lg;
+      return ({ theme }: { theme: DefaultTheme }) => theme.shadows.lg;
     case 'medium':
     default:
-      return ({ theme }) => theme.shadows.md;
+      return ({ theme }: { theme: DefaultTheme }) => theme.shadows.md;
   }
 };
 
